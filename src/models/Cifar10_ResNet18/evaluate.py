@@ -23,7 +23,7 @@ def evaluate():
             label = label.to(device)
             output = model(input)
             loss = criterion(output, label)
-            loss_total += loss
+            loss_total += loss.item()
             _, predicted = torch.max(output.data, 1)
             total += label.size(0)
             correct += (predicted == label).sum().item()
@@ -37,3 +37,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
