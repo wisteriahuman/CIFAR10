@@ -1,8 +1,8 @@
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from models.cifar10_cnn import Cifar10_CNN
-from data import get_data_loaders
+from src.models.Cifar10_CNN import Cifar10_CNN
+from src.data import get_data_loaders
 
 
 MAX_EPOCH = 30
@@ -32,7 +32,7 @@ def train():
             optimizer.step()
         print(f"Epoch [{epoch + 1}/{MAX_EPOCH}], Loss: {loss_total/num_batches_per_epoch:.3f}")
 
-    torch.save(model.state_dict(), './models/cifar10_cnn.pth')
+    torch.save(model.state_dict(), 'models/cifar10_cnn.pth')
 
 
 def main():

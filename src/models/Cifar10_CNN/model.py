@@ -1,6 +1,5 @@
 import torch
 import torch.nn as nn
-from torch.nn.modules import MaxPool2d
 from torchtyping import TensorType
 
 class Cifar10_CNN(nn.Module):

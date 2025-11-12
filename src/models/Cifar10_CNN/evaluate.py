@@ -1,9 +1,7 @@
-from logging import critical
 import torch
 import torch.nn as nn
-from models.cifar10_cnn import Cifar10_CNN
-from data import get_data_loaders
-from train import BATCH_SIZE
+from src.models.Cifar10_CNN import Cifar10_CNN
+from src.data import get_data_loaders
 
 
 MODEL_PATH = "models/cifar10_cnn.pth"
