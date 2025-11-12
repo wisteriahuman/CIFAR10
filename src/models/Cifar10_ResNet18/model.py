@@ -4,8 +4,8 @@ from torchvision import models
 
 def get_cifar10_resnet18() -> models.ResNet:
     model = models.resnet18(weights=models.ResNet18_Weights.DEFAULT)
-    # for param in model.parameters():
-    #     param.requires_grad = False
+    for param in model.parameters():
+        param.requires_grad = False
     model.fc = nn.Linear(in_features=512, out_features=10)
 
     return model
