@@ -4,7 +4,7 @@ from src.models.Cifar10_ResNet18 import get_cifar10_resnet18
 from src.data import get_data_loaders
 
 
-MODEL_PATH = "models/Cifar10_ResNet18.pth"
+MODEL_PATH = "./models/Cifar10_ResNet18.pth"
 def evaluate():
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     model = get_cifar10_resnet18()
