@@ -29,7 +29,7 @@ def train():
             optimizer.step()
         print(f"Epoch [{epoch + 1}/{MAX_EPOCH}], Loss: {loss_total/num_batches_per_epoch:.3f}")
 
-    torch.save(model.state_dict(), 'model/cifar10_resnet18.pth')
+    torch.save(model.state_dict(), 'src/model/cifar10_resnet18.pth')
 
 
 def main():
