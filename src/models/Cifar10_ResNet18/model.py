@@ -3,7 +3,7 @@ from torchvision import models
 
 
 def get_cifar10_resnet18() -> models.ResNet:
-    model = models.resnet18(pretrained=True)
+    model = models.resnet18(weights=models.ResNet18_Weights.DEFAULT)
     # 他のパラメータは訓練せず最後の層のみを訓練するため
     for param in model.parameters():
         param.requires_grad = False
