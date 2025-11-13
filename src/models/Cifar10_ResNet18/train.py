@@ -6,6 +6,7 @@ from src.data import get_data_loaders
 
 
 MAX_EPOCH = 30
+BATCH_SIZE = 128
 
 def train():
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -13,7 +14,7 @@ def train():
     model.to(device)
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(params=model.parameters(), lr=0.001)
-    train_loader, _ = get_data_loaders()
+    train_loader, _ = get_data_loaders(BATCH_SIZE)
     num_batches_per_epoch = len(train_loader)
     model.train()
     for epoch in range(MAX_EPOCH):

@@ -1,6 +1,6 @@
 import torch
 from torchvista import trace_model
-from src.models.Cifar10_CNN.model import Cifar10_CNN
+from src.models.Cifar10_ResNet18.model import get_cifar10_resnet18
 import os
 import glob
 import atexit
@@ -28,7 +28,7 @@ def create_clickable_link(url):
     return f"\033]8;;{url}\033\\{url}\033]8;;\033\\"
 
 def main():
-    model = Cifar10_CNN()
+    model = get_cifar10_resnet18()
     model.eval()
     sample_input = torch.rand(1, 3, 32, 32)
     
