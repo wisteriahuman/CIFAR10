@@ -5,7 +5,7 @@ from src.models.Cifar10_CNN import Cifar10_CNN
 from src.data import get_data_loaders
 
 
-MAX_EPOCH = 30
+MAX_EPOCH = 40
 BATCH_SIZE = 64
 
 
